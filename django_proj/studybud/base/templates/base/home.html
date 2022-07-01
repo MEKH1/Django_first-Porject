@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+
+    {% block content%}
+  
+
+    <h1> Welcome home page </h1>
+    <hr>
+    <div class="home-container"> 
+    
+    
+        <div>
+           {% include 'base/topics_component.html'%} 
+
+        </div>
+
+        
+        <div>
+                <h3 class="text-muted font-monospace">{{room_count}} rooms available</h3>
+                <hr>
+                <a class="text-light text-decoration-none " href="{% url 'create-room' %}"><button class=" m-2 mb-3 btn btn-warning">Create Room 
+                </button> </a>
+                <hr>
+{% include 'base/feed_component.html'%}
+    
+
+        </div>
+
+<div>{% include 'base/activity_component.html'%}</div>
+            
+
+ 
+    
+
+</div>
+
+
+    {% endblock %}

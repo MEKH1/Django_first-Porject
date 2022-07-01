@@ -1,0 +1,7 @@
+<h3>Browse Topics </h3>
+<hr>
+<div> <a class="text-decoration-none fw-bold text-dark ms-3 " href="{%url 'home page'%}">All</a></div>
+{% for topic in topics %}
+
+<div> <a class="text-decoration-none fw-bold text-dark ms-3 " href="{%url 'home page'%}?q={{topic.name}}">{{topic.name}}</a></div>
+{% endfor %}
